@@ -2,18 +2,18 @@
 
 ![AWS Architecture](https://imgur.com/b9iHwVc.png)
 
-🚀 Deploy Java Application on AWS – 3-Tier Architecture (Terraform)
-📌 Project Overview
+# Deploy Java Application on AWS – 3-Tier Architecture (Terraform)
+ Project Overview
 
 This project demonstrates the deployment of a production-grade Java web application on AWS using a 3-Tier Architecture, fully automated with Terraform (Infrastructure as Code).
 
 The architecture follows AWS best practices for scalability, security, availability, and maintainability.
 
-🏗️ Architecture Summary
+ Architecture Summary
 
 The application is divided into three independent tiers:
 
-1️⃣ Presentation Tier (Frontend)
+# 1️⃣ Presentation Tier (Frontend)
 
 Nginx Web Servers
 
@@ -25,7 +25,7 @@ Public Subnets
 
 Internet Gateway
 
-2️⃣ Application Tier (Backend)
+# 2️⃣ Application Tier (Backend)
 
 Apache Tomcat (Java Application)
 
@@ -37,7 +37,7 @@ Private Subnets
 
 Session management via Redis (optional)
 
-3️⃣ Data Tier
+# 3️⃣ Data Tier
 
 Amazon RDS MySQL
 
@@ -47,7 +47,7 @@ Automated Backups
 
 Private Subnets
 
-🌐 Network Design
+# Network Design
 
 Two VPCs:
 
@@ -61,7 +61,7 @@ Secure communication using Security Groups
 
 Optional Transit Gateway for VPC-to-VPC connectivity
 
-🔐 Security Features
+# Security Features
 
 Tier-based Security Groups (least privilege)
 
@@ -73,7 +73,7 @@ IAM roles for EC2 access
 
 Data encryption at rest and in transit
 
-⚙️ Technologies Used
+# Technologies Used
 Category	Tools / Services
 Cloud Provider	AWS
 IaC	Terraform
@@ -84,9 +84,9 @@ Database	Amazon RDS (MySQL)
 Scaling	Auto Scaling Group
 Load Balancing	Application Load Balancer
 Monitoring	Amazon CloudWatch
-📁 Project Structure
-aws-3tier-terraform/
-│
+# Project Structure
+# aws-3tier-terraform/
+ │
 ├── provider.tf
 ├── variables.tf
 ├── vpc.tf
@@ -98,7 +98,7 @@ aws-3tier-terraform/
 ├── outputs.tf
 └── README.md
 
-🛠️ Prerequisites
+# Prerequisites
 
 AWS Account
 
@@ -110,9 +110,9 @@ Terraform installed (v1.x)
 
 Key pair created in AWS
 
-🚀 Deployment Steps
+# Deployment Steps
 1️⃣ Clone Repository
-git clone https://github.com/your-username/aws-3tier-terraform.git
+git clone https://github.com/A4671satya/Java-Application.git
 cd aws-3tier-terraform
 
 2️⃣ Initialize Terraform
@@ -130,13 +130,13 @@ terraform apply
 
 Type yes when prompted.
 
-🌍 Access Application
+# Access Application
 
 After deployment, Terraform outputs the Load Balancer DNS name.
 
 http://<frontend-alb-dns-name>
 
-📊 Monitoring & Scaling
+# Monitoring & Scaling
 
 Auto Scaling based on CPU utilization
 
@@ -152,11 +152,11 @@ High availability across multiple AZs
 ✔ Secure network isolation
 ✔ Production-ready architecture
 
-🧠 Interview Explanation (Short)
+# Interview Explanation (Short)
 
 “This project uses Terraform to deploy a highly available AWS 3-tier architecture with Nginx, Tomcat, and RDS. Each tier is isolated, scalable, and secured following AWS best practices.”
 
-📌 Future Enhancements
+# Future Enhancements
 
 Add CloudFront CDN
 
@@ -168,8 +168,8 @@ Blue-Green deployment
 
 Add Redis (ElastiCache) for sessions
 
-👤 Author
+# 👤 Author
 
 PUPPALA SATYA
 Java | AWS | DevOps
-Kakinada Institute of Engineering & Technology
+
