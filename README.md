@@ -13,7 +13,7 @@ The architecture follows AWS best practices for scalability, security, availabil
 
 The application is divided into three independent tiers:
 
-# 1️⃣ Presentation Tier (Frontend)
+# 1 Presentation Tier (Frontend)
 
 Nginx Web Servers
 
@@ -25,7 +25,7 @@ Public Subnets
 
 Internet Gateway
 
-# 2️⃣ Application Tier (Backend)
+# 2 Application Tier (Backend)
 
 Apache Tomcat (Java Application)
 
@@ -37,7 +37,7 @@ Private Subnets
 
 Session management via Redis (optional)
 
-# 3️⃣ Data Tier
+# 3 Data Tier
 
 Amazon RDS MySQL
 
@@ -85,17 +85,26 @@ Scaling	Auto Scaling Group
 Load Balancing	Application Load Balancer
 Monitoring	Amazon CloudWatch
 # Project Structure
-# aws-3tier-terraform/
- │
+ aws-3tier-terraform/
+ 
 ├── provider.tf
+
 ├── variables.tf
+
 ├── vpc.tf
+
 ├── security-groups.tf
+
 ├── alb.tf
+
 ├── asg-frontend.tf
+
 ├── asg-backend.tf
+
 ├── rds.tf
+
 ├── outputs.tf
+
 └── README.md
 
 # Prerequisites
@@ -111,24 +120,29 @@ Terraform installed (v1.x)
 Key pair created in AWS
 
 # Deployment Steps
-1️⃣ Clone Repository
+1 Clone Repository
 git clone https://github.com/A4671satya/Java-Application.git
+
 cd aws-3tier-terraform
 
-2️⃣ Initialize Terraform
+# 2 Initialize Terraform
+
 terraform init
 
-3️⃣ Validate Configuration
+# 3 Validate Configuration
+
 terraform validate
 
-4️⃣ Preview Infrastructure
+# 4 Preview Infrastructure
+
 terraform plan
 
-5️⃣ Deploy Infrastructure
+# 5 Deploy Infrastructure
+
 terraform apply
 
 
-Type yes when prompted.
+
 
 # Access Application
 
@@ -144,32 +158,20 @@ CloudWatch metrics and alarms
 
 High availability across multiple AZs
 
-✅ Success Criteria
+ Success Criteria
 
-✔ Application accessible via public URL
-✔ Auto Scaling works under load
-✔ Database connectivity established
-✔ Secure network isolation
-✔ Production-ready architecture
+ Application accessible via public URL
+ Auto Scaling works under load
+ Database connectivity established
+ Secure network isolation
+ Production-ready architecture
 
-# Interview Explanation (Short)
 
-“This project uses Terraform to deploy a highly available AWS 3-tier architecture with Nginx, Tomcat, and RDS. Each tier is isolated, scalable, and secured following AWS best practices.”
 
-# Future Enhancements
 
-Add CloudFront CDN
-
-Enable AWS WAF
-
-Implement CI/CD (GitHub Actions)
-
-Blue-Green deployment
-
-Add Redis (ElastiCache) for sessions
-
-# 👤 Author
+#  Author
 
 PUPPALA SATYA
+
 Java | AWS | DevOps
 
