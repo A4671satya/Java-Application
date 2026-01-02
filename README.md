@@ -1,7 +1,3 @@
-# Deploy Java Application on AWS 3-Tier Architecture
-
-![AWS Architecture](https://imgur.com/b9iHwVc.png)
-
 # Deploy Java Application on AWS – 3-Tier Architecture (Terraform)
  Project Overview
 
@@ -13,65 +9,69 @@ The architecture follows AWS best practices for scalability, security, availabil
 
 The application is divided into three independent tiers:
 
-# 1 Presentation Tier (Frontend)
+# Deploy Java Application on AWS 3-Tier Architecture
 
-Nginx Web Servers
+![AWS Architecture](https://imgur.com/b9iHwVc.png)
 
-Auto Scaling Group
+## 1 Presentation Tier (Frontend)
 
-Public Application Load Balancer
+ - Nginx Web Servers
 
-Public Subnets
+- Auto Scaling Group
 
-Internet Gateway
+- Public Application Load Balancer
 
-# 2 Application Tier (Backend)
+- Public Subnets
 
-Apache Tomcat (Java Application)
+- Internet Gateway
 
-Auto Scaling Group
+## 2 Application Tier (Backend)
 
-Internal Load Balancer
+- Apache Tomcat (Java Application)
 
-Private Subnets
+- Auto Scaling Group
 
-Session management via Redis (optional)
+- Internal Load Balancer
+
+- Private Subnets
+
+- Session management via Redis (optional)
 
 # 3 Data Tier
 
-Amazon RDS MySQL
+- Amazon RDS MySQL
 
-Multi-AZ Deployment
+- Multi-AZ Deployment
 
-Automated Backups
+- Automated Backups
 
-Private Subnets
+- Private Subnets
 
 # Network Design
 
-Two VPCs:
+- Two VPCs:
 
-Frontend VPC: 192.168.0.0/16
+- Frontend VPC: 192.168.0.0/16
 
-Backend VPC: 172.32.0.0/16
+- Backend VPC: 172.32.0.0/16
 
-Public & Private subnets across multiple AZs
+- Public & Private subnets across multiple AZs
 
-Secure communication using Security Groups
+- Secure communication using Security Groups
 
-Optional Transit Gateway for VPC-to-VPC connectivity
+- Optional Transit Gateway for VPC-to-VPC connectivity
 
 # Security Features
 
-Tier-based Security Groups (least privilege)
+- Tier-based Security Groups (least privilege)
 
-Private subnets for backend & database
+- Private subnets for backend & database
 
-No direct public access to application or database
+- No direct public access to application or database
 
-IAM roles for EC2 access
+- IAM roles for EC2 access
 
-Data encryption at rest and in transit
+- Data encryption at rest and in transit
 
 # Technologies Used
 Category	Tools / Services
@@ -109,38 +109,38 @@ Monitoring	Amazon CloudWatch
 
 # Prerequisites
 
-AWS Account
+- AWS Account
 
-IAM User with Admin access
+- IAM User with Admin access
 
-AWS CLI configured
+- AWS CLI configured
 
-Terraform installed (v1.x)
+- Terraform installed (v1.x)
 
-Key pair created in AWS
+- Key pair created in AWS
 
-# Deployment Steps
+### Deployment Steps
 1 Clone Repository
 git clone https://github.com/A4671satya/Java-Application.git
-
+```
 cd aws-3tier-terraform
-
-# 2 Initialize Terraform
-
+```
+### 2 Initialize Terraform
+```
 terraform init
-
-# 3 Validate Configuration
-
+```
+### 3 Validate Configuration
+```
 terraform validate
-
-# 4 Preview Infrastructure
-
+```
+### 4 Preview Infrastructure
+```
 terraform plan
-
-# 5 Deploy Infrastructure
-
+```
+### 5 Deploy Infrastructure
+```
 terraform apply
-
+```
 
 
 
@@ -152,19 +152,19 @@ http://<frontend-alb-dns-name>
 
 # Monitoring & Scaling
 
-Auto Scaling based on CPU utilization
+- Auto Scaling based on CPU utilization
 
-CloudWatch metrics and alarms
+- CloudWatch metrics and alarms
 
-High availability across multiple AZs
+- High availability across multiple AZs
 
- Success Criteria
+-  Success Criteria
 
- Application accessible via public URL
- Auto Scaling works under load
- Database connectivity established
- Secure network isolation
- Production-ready architecture
+-  Application accessible via public URL
+-  Auto Scaling works under load
+-  Database connectivity established
+-  Secure network isolation
+ - Production-ready architecture
 
 
 
